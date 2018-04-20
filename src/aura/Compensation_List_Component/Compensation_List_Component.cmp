@@ -1,0 +1,9 @@
+<aura:component controller="CompensationController">
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    <aura:attribute name="compensations" type="Compensation__c[]" />
+    <div id="comp_list">
+        <aura:iteration items="{!v.compensations}" var="comp">
+                <c:compensationItem compensation="{!comp}"/>
+        </aura:iteration>
+    </div>
+</aura:component>

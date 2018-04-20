@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:attribute name="compensation" type="Compensation__c" />
+
+
+    <!-- Poner lo que se va a mostrar aqui... -->
+</aura:component>
