@@ -1,0 +1,3 @@
+Dear {!User.Name},
+The {!Compensation__c.Name} has been {!Compensation__c.Status__c}.
+Thank you.

@@ -1,0 +1,11 @@
+Compensation information for {!Compensation__c.Employee__c}:
+
+Compensation Name: {!Compensation__c.Name}
+Created Date: {!Compensation__c.CreatedDate}
+Compensation Type: {!Compensation__c.RecordType}
+Amount: {!Compensation__c.Amount__c}
+Job Category: {!Compensation__c.Job_Category__c}
+Location: {!Compensation__c.Location__c}
+Office: {!Compensation__c.Office__c}
+
+For more details go to: {!Compensation__c.Link}
