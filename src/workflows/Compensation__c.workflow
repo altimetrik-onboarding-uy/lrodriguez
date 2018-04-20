@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Approved_mail_alert</fullName>
+        <description>Approved mail alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Employee__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <recipient>lrodriguez.manager@altimetrik.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Compensation_Approval_Result</template>
+    </alerts>
+    <alerts>
+        <fullName>Compensation_info_mail_alert</fullName>
+        <description>Compensation info mail alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Employee__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Compensation_information_template</template>
+    </alerts>
+    <alerts>
+        <fullName>Rejected_mail_alert</fullName>
+        <description>Rejected mail alert</description>
+        <protected>false</protected>
+        <recipients>
+            <field>Employee__c</field>
+            <type>contactLookup</type>
+        </recipients>
+        <recipients>
+            <recipient>lrodriguez.manager@altimetrik.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Compensation_Approval_Result</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Approved</fullName>
+        <field>Status__c</field>
+        <literalValue>APPROVED</literalValue>
+        <name>Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Initial_Condition</fullName>
+        <field>Status__c</field>
+        <literalValue>SUBMITTED</literalValue>
+        <name>Initial Condition</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Rejected</fullName>
+        <field>Status__c</field>
+        <literalValue>REJECTED</literalValue>
+        <name>Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+</Workflow>
