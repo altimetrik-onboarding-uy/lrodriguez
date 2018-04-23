@@ -1,9 +1,54 @@
-<aura:component controller="CompensationController">
+<aura:component controller="CompensationController" implements="force:appHostable">
     <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
     <aura:attribute name="compensations" type="Compensation__c[]" />
-    <div id="comp_list">
-        <aura:iteration items="{!v.compensations}" var="comp">
-                <c:compensationItem compensation="{!comp}"/>
-        </aura:iteration>
+    <aura:attribute name="type_selected" type="String" />
+
+    <div>
+        <div>
+            <lightning:buttonGroup class="slds-float_right">
+                <lightning:button label="All" name="all" onclick="{!c.applyFilter}"/>
+                <lightning:button label="Study" name="study" onclick="{!c.applyFilter}"/>
+                <lightning:button label="Salary" name="salary" onclick="{!c.applyFilter}"/>
+                <lightning:button label="Research" name="research" onclick="{!c.applyFilter}"/>
+            </lightning:buttonGroup>
+        </div>
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_striped" >
+            <thead>
+                <tr class="slds-text-title_caps">
+                    <th scope="col">
+                        <div class="slds-truncate" title="Employee Name">Employee Name</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Employee Birthdate">Employee Birthdate</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Job Category">Job Category</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Compensation Type">Compensation Type</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Amount">Amount</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Location">Location</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Office">Office</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Submitted">Submitted</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Status">Status</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <aura:iteration items="{!v.compensations}" var="comp">
+                    <c:compensationItem compensation="{!comp}"/>
+                </aura:iteration>
+            </tbody>
+        </table>
     </div>
 </aura:component>

@@ -1,0 +1,71 @@
+42.0 APEX_CODE,FINEST;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+16:26:54.0 (74294)|USER_INFO|[EXTERNAL]|005f4000001iPIc|lrodriguez-onboarding@altimetrik.com|Argentine Time|GMT-03:00
+16:26:54.0 (122219)|EXECUTION_STARTED
+16:26:54.0 (128517)|CODE_UNIT_STARTED|[EXTERNAL]|Aura
+16:26:54.0 (1127855)|HEAP_ALLOCATE|[72]|Bytes:3
+16:26:54.0 (1184142)|HEAP_ALLOCATE|[77]|Bytes:152
+16:26:54.0 (1208726)|HEAP_ALLOCATE|[342]|Bytes:408
+16:26:54.0 (1232652)|HEAP_ALLOCATE|[355]|Bytes:408
+16:26:54.0 (1251729)|HEAP_ALLOCATE|[467]|Bytes:48
+16:26:54.0 (1285853)|HEAP_ALLOCATE|[139]|Bytes:6
+16:26:54.0 (1313190)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:6
+16:26:54.0 (1325764)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:6
+16:26:54.0 (2392910)|CODE_UNIT_STARTED|[EXTERNAL]|01pf4000009OyzM|CompensationController.getCompensations
+16:26:54.0 (2493545)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:1
+16:26:54.0 (2506711)|METHOD_ENTRY|[1]|01pf4000009OyzM|CompensationController.CompensationController()
+16:26:54.0 (2513440)|STATEMENT_EXECUTE|[1]
+16:26:54.0 (2519829)|STATEMENT_EXECUTE|[1]
+16:26:54.0 (2552342)|HEAP_ALLOCATE|[50]|Bytes:5
+16:26:54.0 (2574309)|HEAP_ALLOCATE|[56]|Bytes:5
+16:26:54.0 (2582811)|HEAP_ALLOCATE|[64]|Bytes:7
+16:26:54.0 (2606068)|SYSTEM_MODE_ENTER|false
+16:26:54.0 (2620702)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:5
+16:26:54.0 (2628273)|SYSTEM_MODE_EXIT|false
+16:26:54.0 (2637099)|METHOD_EXIT|[1]|CompensationController
+16:26:54.0 (2642775)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:6
+16:26:54.0 (2651119)|SYSTEM_MODE_ENTER|false
+16:26:54.0 (2658866)|VARIABLE_SCOPE_BEGIN|[3]|filter|String|false|false
+16:26:54.0 (2681042)|VARIABLE_ASSIGNMENT|[3]|filter|"salary"
+16:26:54.0 (2693942)|HEAP_ALLOCATE|[4]|Bytes:5
+16:26:54.0 (2699244)|STATEMENT_EXECUTE|[3]
+16:26:54.0 (2701243)|STATEMENT_EXECUTE|[4]
+16:26:54.0 (2800288)|HEAP_ALLOCATE|[4]|Bytes:4
+16:26:54.0 (2872117)|VARIABLE_SCOPE_BEGIN|[4]|compensations|List<Compensation__c>|true|false
+16:26:54.0 (2884415)|HEAP_ALLOCATE|[EXTERNAL]|Bytes:4
+16:26:54.0 (2897469)|VARIABLE_ASSIGNMENT|[4]|compensations|[]|0x49e79ba2
+16:26:54.0 (2906048)|HEAP_ALLOCATE|[5]|Bytes:3
+16:26:54.0 (2930264)|HEAP_ALLOCATE|[10]|Bytes:5
+16:26:54.0 (2938814)|HEAP_ALLOCATE|[10]|Bytes:6
+16:26:54.0 (2948711)|STATEMENT_EXECUTE|[10]
+16:26:54.0 (2950714)|STATEMENT_EXECUTE|[11]
+16:26:54.0 (2953223)|HEAP_ALLOCATE|[11]|Bytes:210
+16:26:54.0 (2972166)|HEAP_ALLOCATE|[11]|Bytes:4
+16:26:54.0 (2981105)|HEAP_ALLOCATE|[11]|Bytes:7
+16:26:54.0 (3804886)|SOQL_EXECUTE_BEGIN|[11]|Aggregations:0|SELECT Employee__r.Id, Employee__r.Name, Employee__r.birthdate, job_category__c, RecordType.Name, amount__c, location__c, office__c, submitted__c, status__c FROM Compensation__c WHERE RecordType.Name = :tmpVar1
+16:26:54.0 (10431391)|SOQL_EXECUTE_END|[11]|Rows:3
+16:26:54.0 (10455489)|HEAP_ALLOCATE|[11]|Bytes:16
+16:26:54.0 (10489555)|HEAP_ALLOCATE|[11]|Bytes:855
+16:26:54.0 (10528963)|HEAP_ALLOCATE|[11]|Bytes:16
+16:26:54.0 (10586685)|VARIABLE_ASSIGNMENT|[11]|compensations|[{"Employee__c":"003f400000Im3OFAAZ","Job_Category__c":"Senior","RecordTypeId":"012f4000000xpoaAAA","Location__c":"Uruguay","Office__c":"MVD WTC 2","Submitted__c":false,"Status__c":"NOT SUBMITTED","Id":"a00f4000007wcrhAAA","Employee__r":{"Id":"003f400000Im3OFAAZ","Name":"Andy Young"},"RecordType":{"Name":"Salary","Id":"012f4000000xpoaAAA"}},{"Employee__c":"003f400000Im3OFAAZ","Job_Category__c":"Semi-Senior","RecordTypeId":"012f4000000xpoaAAA","Location__c":"Uruguay","Office__c":"MVD WTC 1","Submitted__c":true,"Status__c":"SUBMITTED","Id":"a00f4000007wcrmAAA","Employee__r":{"Id":"003f400000Im3OFAAZ","Name":"Andy Young"},"RecordType":{"Name":"Salary","Id":"012f4000000xpoaAAA"}},{"Employee__c":"003f400000I1ma3AAB","Job_Category__c":"Junior","RecordTypeId":"012f4000000xpoaAAA","Location__c":"Uruguay","Office__c":"MVD WTC 1","Submitted__c":false,"Status__c":"NOT SUBMITTED","Id":"a00f4000007wUBOAA2","Employee__r":{"Id":"003f400000I1ma3AAB","Name":"Julio Rios"},"RecordType":{"Name":"Salary","Id":"012f4000000xpoaAAA"}}]|0x40c2cc1b
+16:26:54.0 (10609709)|STATEMENT_EXECUTE|[17]
+16:26:54.0 (10619843)|SYSTEM_MODE_EXIT|false
+16:26:54.10 (10640950)|CUMULATIVE_LIMIT_USAGE
+16:26:54.10 (10640950)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 1 out of 100
+  Number of query rows: 3 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+16:26:54.10 (10640950)|CUMULATIVE_LIMIT_USAGE_END
+
+16:26:54.0 (10673729)|CODE_UNIT_FINISHED|CompensationController.getCompensations
+16:26:54.0 (10775703)|CODE_UNIT_FINISHED|Aura
+16:26:54.0 (11897011)|EXECUTION_FINISHED

@@ -1,6 +1,34 @@
 <aura:component >
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    <aura:attribute name="birthdate" type="DateTime" />
     <aura:attribute name="compensation" type="Compensation__c" />
-
-
-    <!-- Poner lo que se va a mostrar aqui... -->
+    <tr>
+        <td scope="row">
+            <a onclick="{!c.editRecord}">{!v.compensation.Employee__r.Name}</a>
+        </td>
+        <td scope="row">
+            <lightning:formattedDateTime value="{!v.birthdate}" year="numeric" day="2-digit" month="long" />
+        </td>
+        <td scope="row">
+            {!v.compensation.job_category__c}
+        </td>
+        <td scope="row">
+            {!v.compensation.RecordType.Name}
+        </td>
+        <td scope="row">
+            {!v.compensation.amount__c}
+        </td>
+        <td scope="row">
+            {!v.compensation.location__c}
+        </td>
+        <td scope="row">
+            {!v.compensation.office__c}
+        </td>
+        <td scope="row">
+            {!v.compensation.submitted__c}
+        </td>
+        <td scope="row">
+            {!v.compensation.status__c}
+        </td>
+    </tr>
 </aura:component>
