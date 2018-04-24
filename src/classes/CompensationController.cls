@@ -32,6 +32,4 @@ public with sharing class CompensationController {
 		}
 		return compensations;
 	}
-
-
 }

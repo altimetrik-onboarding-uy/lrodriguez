@@ -1,7 +1,6 @@
 <aura:component controller="CompensationController" implements="force:appHostable">
     <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
     <aura:attribute name="compensations" type="Compensation__c[]" />
-    <aura:attribute name="type_selected" type="String" />
 
     <div>
         <div>

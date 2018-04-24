@@ -134,5 +134,73 @@
         },
         "DefType": "COMPONENT",
         "Format": "XML"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v36.0/tooling/sobjects/AuraDefinition/0Adf4000001EWMFCA4"
+        },
+        "Id": "0Adf4000001EWMFCA4",
+        "AuraDefinitionBundleId": "0Abf4000000dXOBCA2",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v36.0/tooling/sobjects/AuraDefinitionBundle/0Abf4000000dXOBCA2"
+            },
+            "DeveloperName": "EmployeeCompList"
+        },
+        "DefType": "CONTROLLER",
+        "Format": "JS"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v36.0/tooling/sobjects/AuraDefinition/0Adf4000001EWMACA4"
+        },
+        "Id": "0Adf4000001EWMACA4",
+        "AuraDefinitionBundleId": "0Abf4000000dXOBCA2",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v36.0/tooling/sobjects/AuraDefinitionBundle/0Abf4000000dXOBCA2"
+            },
+            "DeveloperName": "EmployeeCompList"
+        },
+        "DefType": "STYLE",
+        "Format": "CSS"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v36.0/tooling/sobjects/AuraDefinition/0Adf4000001EWM5CAO"
+        },
+        "Id": "0Adf4000001EWM5CAO",
+        "AuraDefinitionBundleId": "0Abf4000000dXOBCA2",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v36.0/tooling/sobjects/AuraDefinitionBundle/0Abf4000000dXOBCA2"
+            },
+            "DeveloperName": "EmployeeCompList"
+        },
+        "DefType": "COMPONENT",
+        "Format": "XML"
+    },
+    {
+        "attributes": {
+            "type": "AuraDefinition",
+            "url": "/services/data/v36.0/tooling/sobjects/AuraDefinition/0Adf4000001EWMKCA4"
+        },
+        "Id": "0Adf4000001EWMKCA4",
+        "AuraDefinitionBundleId": "0Abf4000000dXOBCA2",
+        "AuraDefinitionBundle": {
+            "attributes": {
+                "type": "AuraDefinitionBundle",
+                "url": "/services/data/v36.0/tooling/sobjects/AuraDefinitionBundle/0Abf4000000dXOBCA2"
+            },
+            "DeveloperName": "EmployeeCompList"
+        },
+        "DefType": "HELPER",
+        "Format": "JS"
     }
 ]
