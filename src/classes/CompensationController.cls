@@ -10,6 +10,12 @@ public with sharing class CompensationController {
 			compensations = Database.query(query);
 		} else if (filter == 'study' || filter == 'salary' || filter == 'research'){
 			compensations = Database.query(query + ' WHERE RecordType.Name = \'' + filter + '\'');
+		} else if (filter == 'submitted' || filter == 'not_submitted'){
+			String condition = 'false';
+			if (filter == 'submitted'){
+				condition = 'true';
+			}
+			compensations = Database.query(query + ' WHERE Submitted__c = ' + condition);
 		}
 		return compensations;
     }
@@ -27,5 +33,10 @@ public with sharing class CompensationController {
 			compensations = Database.query(query2 + ' WHERE Employee__r.Id = \'' + recordId + '\'');
 		}
 		return compensations;
+	}
+
+	@AuraEnabled
+	public static void submitSelectedIds(String[] ids){
+
 	}
 }

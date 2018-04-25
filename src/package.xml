@@ -81,6 +81,7 @@
 		<members>Compensation_List_Component</members>
 		<members>compensationItem</members>
 		<members>EmployeeCompList</members>
+		<members>updateSelection</members>
 		<name>AuraDefinitionBundle</name>
 	</types>
 	<version>36.0</version>
