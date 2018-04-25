@@ -7,7 +7,8 @@
             <a onclick="{!c.editRecord}">{!v.compensation.Employee__r.Name}</a>
         </td>
         <td scope="row">
-            <lightning:formattedDateTime value="{!v.birthdate}" year="numeric" day="2-digit" month="long" />
+            <!-- <lightning:formattedDateTime value="{!v.birthdate}" year="numeric" day="2-digit" month="long" /> -->
+            <ui:outputDate value="{!v.birthdate}" format="MMMM dd, yyyy"/>
         </td>
         <td scope="row">
             {!v.compensation.job_category__c}
