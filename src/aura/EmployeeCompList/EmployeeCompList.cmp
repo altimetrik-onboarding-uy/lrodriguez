@@ -1,0 +1,51 @@
+<aura:component controller="CompensationController" implements="flexipage:availableForAllPageTypes,force:hasRecordId">
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    <aura:attribute name="compensations" type="Compensation__c[]" />
+    <aura:attribute name="recordId" type="String" />
+
+    <div>
+        <div class="slds-text-title_caps slds-m-bottom_small">
+            Compensation List of Employee
+        </div>
+        <div>
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_striped" >
+                <thead>
+                    <tr class="slds-text-title_caps">
+                        <th scope="col">
+                            <div class="slds-truncate" title="Employee Name">Employee Name</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Employee Birthdate">Employee Birthdate</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Job Category">Job Category</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Compensation Type">Compensation Type</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Amount">Amount</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Location">Location</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Office">Office</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Submitted">Submitted</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Status">Status</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <aura:iteration items="{!v.compensations}" var="comp">
+                        <c:compensationItem compensation="{!comp}"/>
+                    </aura:iteration>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</aura:component>
