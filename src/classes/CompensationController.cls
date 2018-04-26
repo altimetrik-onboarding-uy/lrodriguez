@@ -36,7 +36,18 @@ public with sharing class CompensationController {
 	}
 
 	@AuraEnabled
-	public static void submitSelectedIds(String[] ids){
-
+	public static Boolean submitCompId(String idToSubmit){
+		String query = 'SELECT Id, Name, submitted__c FROM Compensation__c';
+		Compensation__c[] comps = Database.query(query + ' WHERE Id = \'' + idToSubmit + '\'');
+		for(Compensation__c c: comps){
+			c.submitted__c = true;
+		}
+		Database.SaveResult[] result = Database.update(comps, false);
+		for(Database.SaveResult sr : result){
+			if (!sr.isSuccess()){
+				return false;
+			}
+		}
+		return true;
 	}
 }

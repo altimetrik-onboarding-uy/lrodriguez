@@ -6,8 +6,8 @@
 
     <div>
         <div>
-            <lightning:button class="slds-float_right" label="Submit Selection"
-                                name="submit_selection" onclick="{!c.submitSelected}"/>
+            <lightning:button class="slds-float_left" label="Export to CSV"
+                                name="export_csv" onclick="{!c.exportCSV}"/>
         </div>
         <div>
             <lightning:buttonGroup class="slds-float_right">
