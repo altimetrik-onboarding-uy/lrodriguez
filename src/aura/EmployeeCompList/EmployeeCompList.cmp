@@ -42,7 +42,7 @@
                 </thead>
                 <tbody>
                     <aura:iteration items="{!v.compensations}" var="comp">
-                        <c:compensationItem compensation="{!comp}"/>
+                        <c:compensationItemContact compensation="{!comp}"/>
                     </aura:iteration>
                 </tbody>
             </table>

@@ -8,7 +8,7 @@
             </value>
         </processMetadataValues>
         <name>myRule_1_A1</name>
-        <label>Compensation_info_mail_alert</label>
+        <label>Send Compensation info</label>
         <locationX>100</locationX>
         <locationY>200</locationY>
         <actionName>Compensation__c.Compensation_info_mail_alert</actionName>
@@ -85,10 +85,10 @@
             <connector>
                 <targetReference>myRule_1_A1</targetReference>
             </connector>
-            <label>Location is Uruguay?</label>
+            <label>Uruguay?</label>
         </rules>
     </decisions>
-    <description>Email sent to employee when Uruguayan location selected.</description>
+    <description>Send an email to the manager when uruguay is selected</description>
     <interviewLabel>Uruguay_Location_Compensation-1_InterviewLabel</interviewLabel>
     <label>Uruguay Location Compensation</label>
     <processMetadataValues>
@@ -112,7 +112,7 @@
     <processMetadataValues>
         <name>TriggerType</name>
         <value>
-            <stringValue>onAllChanges</stringValue>
+            <stringValue>onCreateOnly</stringValue>
         </value>
     </processMetadataValues>
     <processType>Workflow</processType>
