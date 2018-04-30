@@ -38,7 +38,12 @@ public with sharing class CompensationController {
 	@AuraEnabled
 	public static Boolean submitCompId(String idToSubmit){
 		String query = 'SELECT Id, Name, submitted__c FROM Compensation__c';
-		Compensation__c[] comps = Database.query(query + ' WHERE Id = \'' + idToSubmit + '\'');
+		Compensation__c[] comps;
+		try {
+			comps = Database.query(query + ' WHERE Id = \'' + idToSubmit + '\'');
+		} catch (System.QueryException qe){
+			return false;
+		}
 		for(Compensation__c c: comps){
 			c.submitted__c = true;
 		}
