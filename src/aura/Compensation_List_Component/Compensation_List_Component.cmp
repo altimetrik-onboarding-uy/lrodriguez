@@ -1,19 +1,29 @@
 <aura:component controller="CompensationController" implements="force:appHostable">
     <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
     <aura:attribute name="compensations" type="Compensation__c[]" />
+    <aura:attribute name="selected_comp" type="String[]" />
+    <aura:handler name="updateSelection" event="c:updateSelection" action="{!c.handleUpdateSelection}"/>
 
     <div>
+        <div>
+            <lightning:button class="slds-float_left" label="Export to CSV"
+                                name="export_csv" onclick="{!c.exportCSV}"/>
+        </div>
         <div>
             <lightning:buttonGroup class="slds-float_right">
                 <lightning:button label="All" name="all" onclick="{!c.applyFilter}"/>
                 <lightning:button label="Study" name="study" onclick="{!c.applyFilter}"/>
                 <lightning:button label="Salary" name="salary" onclick="{!c.applyFilter}"/>
                 <lightning:button label="Research" name="research" onclick="{!c.applyFilter}"/>
+                <lightning:button label="Submitted" name="submitted" onclick="{!c.applyFilterSubmitted}"/>
+                <lightning:button label="Not Submitted" name="not_submitted" onclick="{!c.applyFilterSubmitted}"/>
             </lightning:buttonGroup>
         </div>
         <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_striped" >
             <thead>
                 <tr class="slds-text-title_caps">
+                    <th scope="col">
+                    </th>
                     <th scope="col">
                         <div class="slds-truncate" title="Employee Name">Employee Name</div>
                     </th>

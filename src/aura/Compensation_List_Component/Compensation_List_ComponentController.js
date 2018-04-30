@@ -34,5 +34,30 @@
         });
         // Send action off to be executed
         $A.enqueueAction(action);
+	},
+	applyFilterSubmitted : function(component, event, helper){
+		var submittedField = event.getSource().get('v.name');
+		var action = component.get("c.getCompensations");
+		action.setParams({
+            "filter": submittedField
+        });
+		action.setCallback(this, function(response) {
+            var state = response.getState();
+            if (state === "SUCCESS") {
+                component.set("v.compensations", response.getReturnValue());
+            }
+            else {
+                console.log("Failed with state: " + state);
+            }
+        });
+        // Send action off to be executed
+        $A.enqueueAction(action);
+	},
+	handleUpdateSelection : function(component, event, helper){
+		helper.updateSelection(component, event);
+	},
+	exportCSV : function(component, event, helper){
+		var compList = component.get("v.compensations");
+		helper.convertToCSV(compList);
 	}
 })

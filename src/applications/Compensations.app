@@ -2,6 +2,7 @@
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
     <defaultLandingTab>standard-home</defaultLandingTab>
     <label>Compensations</label>
+    <tab>Compensations_Part_2</tab>
     <tab>standard-Contact</tab>
     <tab>Compensation__c</tab>
     <tab>standard-Dashboard</tab>

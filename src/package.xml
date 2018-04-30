@@ -21,6 +21,10 @@
 		<name>ApprovalProcess</name>
 	</types>
 	<types>
+		<members>*</members>
+		<name>AuraDefinitionBundle</name>
+	</types>
+	<types>
 		<members>Compensations</members>
 		<name>CustomApplication</name>
 	</types>
@@ -76,12 +80,6 @@
 	<types>
 		<members>Compensation__c</members>
 		<name>Workflow</name>
-	</types>
-	<types>
-		<members>Compensation_List_Component</members>
-		<members>compensationItem</members>
-		<members>EmployeeCompList</members>
-		<name>AuraDefinitionBundle</name>
 	</types>
 	<version>36.0</version>
 </Package>

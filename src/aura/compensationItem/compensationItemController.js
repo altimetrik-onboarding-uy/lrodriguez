@@ -13,5 +13,14 @@
 	         "recordId": comp.Employee__r.Id
 	    });
 	    editRecordEvent.fire();
+	},
+	handleChange : function(component, event, helper){
+		var updateSelection = component.getEvent("updateSelection");
+		var parameters = {
+			'id': component.get("v.compensation").Id,
+			'state': component.find("selectedComp").get("v.checked")
+		};
+        updateSelection.setParams({ "selectionChange": parameters });
+        updateSelection.fire();
 	}
 })
